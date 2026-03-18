@@ -1,0 +1,21 @@
+/* Full screen flex layout */
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+/* Content below header fills remaining space */
+.admin-content {
+  flex: 1;           /* take remaining space */
+  padding: 20px;
+  margin: 0;
+  overflow-y: auto;  /* scroll if content is long */
+}
+
+/* Optional: reset body/html styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

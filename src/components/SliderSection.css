@@ -1,0 +1,32 @@
+.slider-section {
+  width: 100%;
+  margin: 0;           /* remove extra margin */
+  padding: 0;          /* remove extra padding */
+}
+
+.slide img {
+  width: 100%;
+  height: auto;        /* maintain aspect ratio */
+  max-height: 600px;   /* optional: limit very tall images */
+  object-fit: cover;   /* crop if needed */
+  display: block;
+  border-radius: 0;    /* remove border radius to use full width */
+}
+
+/* Responsive heights if you still want them */
+@media (max-width: 1024px) {
+  .slide img {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide img {
+    max-height: 250px;
+  }
+}
+
+/* Remove arrows and dots */
+.slick-dots, .slick-prev, .slick-next {
+  display: none !important;
+}

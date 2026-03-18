@@ -1,0 +1,65 @@
+.usercards-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.usercards-header {
+  display: flex;
+  justify-content: space-between; /* heading left, button right */
+  align-items: center;
+  margin-bottom: 15px;
+}
+.header-buttons {
+  display: flex;
+  gap: 0.5rem; /* small space between buttons */
+} 
+.usercards-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Small OTP button on right */
+.otp-btn-small {
+  font-size: 0.75rem;
+  background-color: #97144d;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+           /* shrink to fit content */
+  max-width: 110px;         /* optional max width */
+  white-space: nowrap;     /* prevent text wrapping */
+  transition: background 0.3s;
+}
+
+.otp-btn-small:hover {
+  background-color: #0056b3;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.usercards-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.usercards-table th,
+.usercards-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.usercards-table th {
+  background-color: #f2f2f2;
+}
+
+.usercards-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

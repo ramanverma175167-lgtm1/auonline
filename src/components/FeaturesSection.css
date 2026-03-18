@@ -1,0 +1,65 @@
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+/* BUTTONS: Always one line or centered */
+.feature-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap; /* NEVER wrap */
+  white-space: nowrap; /* Prevent breaking text */
+}
+
+/* For cards with 1 button */
+.feature-buttons.single-button {
+  justify-content: center;
+}
+
+/* Force sibling buttons to shrink instead of wrapping */
+.feature-btn {
+  flex-shrink: 1;
+  padding: 8px 15px;
+  background-color: #6d276d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.feature-btn:hover {
+  background-color: #6c5055;
+}
+
+/* OPTIONAL: On very small screens the container can scroll horizontally instead of wrapping */
+@media (max-width: 380px) {
+  .feature-buttons {
+    overflow-x: auto;
+    padding-bottom: 5px; /* give space for scrollbar */
+  }
+}

@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.rotating {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Page layout */
+.forgot-link {
+  display: block;
+  font-size: 0.85rem;
+  color: #97144d;
+  text-decoration: none;
+  margin-top: -10px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.forgot-link:hover {
+  color: #3b5be0;
+  text-decoration: underline;
+}
+
+.login-page {
+  min-height: 70vh;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+/* Card */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  background: #eef1f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  outline: none; /* remove focus outline */
+  color: #333;
+}
+
+.tabs button:hover {
+  background: #ddd;
+}
+
+/* Active tab always colored */
+.tabs button.active {
+  background: #97144d;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Prevent losing color on focus/active */
+.tabs button:focus {
+  outline: none;
+}
+
+/* Form Labels */
+.form label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  display: block;
+  color: #555;
+}
+
+/* Inputs */
+.form input,
+.form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+/* Row */
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #97144d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background: #97144d;
+}
+
+/* ATM PIN input with eye icon */
+.pin-container {
+  position: relative;
+  width: 100%;
+}
+
+.pin-container input {
+  width: 100%;
+  padding-right: 40px; /* space for eye icon */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #555;
+  user-select: none;
+}
+
+/* Responsive adjustments */
+
+/* Small phones */
+@media (max-width: 360px) {
+  .login-card {
+    padding: 16px;
+  }
+
+  .tabs button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .login-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets & desktops */
+@media (min-width: 768px) {
+  .login-card {
+    max-width: 460px;
+    padding: 26px;
+  }
+}

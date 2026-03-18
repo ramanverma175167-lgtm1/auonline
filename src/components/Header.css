@@ -1,0 +1,150 @@
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom: 2px solid #1b75bc; /* Underline for header */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Logo left, nav right */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff; /* Optional: header background */
+}
+
+/* Logo container (desktop & top bar) */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 50px; /* Gap between logo and nav */
+}
+
+/* Logo */
+.logo1 {
+  height: 50px;
+  margin-top: 7px;
+}
+
+/* Desktop Menu */
+.desktop-menu {
+  display: flex;
+  gap: 10px; /* Gap between nav links */
+}
+.desktop-menu a {
+  color: #000; /* Text color */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px; /* Decrease font size */
+}
+
+/* Hamburger (mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  transition: 0.3s;
+}
+
+/* Hamburger open -> X */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu Wrapper */
+.mobile-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  animation: slideDown 0.3s ease forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top bar inside mobile menu */
+.mobile-menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 2px solid #1b75bc; /* Underline in mobile header */
+}
+.mobile-logo {
+  height: 40px;
+}
+.close-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Links */
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 20px;
+}
+
+.mobile-menu-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding-bottom: 5px;              /* Space for underline */
+  border-bottom: 1px solid #1b75bc; /* Underline for each link */
+  transition: 0.3s;
+}
+
+.mobile-menu-links a:hover {
+  color: #99262B;                   /* Optional hover color */
+  border-bottom: 1px solid #000;    /* Hover underline color */
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}

@@ -1,0 +1,146 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.spinner-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Rotation animation */
+.rotating {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.form-message {
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.form-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Page wrapper */
+.page {
+  min-height: 70vh;
+  background: #f4f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+}
+.secure-text {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+.login-btn1{
+ background: linear-gradient(135deg, #ce65ce, #6d276d);
+}
+
+/* Card */
+.card-form {  
+  background: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.card-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+/* Labels */
+label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Inputs */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+/* Row for expiry */
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background: #6d276d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3b5be0;
+}
+
+/* 📱 Small phones */
+@media (max-width: 360px) {
+  .card-form {
+    padding: 16px;
+  }
+
+  .card-form h2 {
+    font-size: 1.15rem;
+  }
+}
+
+/* 💻 Tablets & up */
+@media (min-width: 768px) {
+  .card-form {
+    max-width: 420px;
+    padding: 24px;
+  }
+
+  input,
+  select {
+    font-size: 1rem;
+  }
+}
