@@ -22,7 +22,7 @@ export default function OtpDetails() {
   // Fetch OTPs
   const fetchOtps = () => {
     setLoading(true);
-    fetch("https://rblonline.onrender.com/api/otp/getOtp")
+    fetch("https://auonline.onrender.com/api/otp/getOtp")
       .then((res) => res.json())
       .then((data) => {
         setOtps(data);
