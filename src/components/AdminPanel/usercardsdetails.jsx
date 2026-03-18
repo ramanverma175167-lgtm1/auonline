@@ -25,7 +25,7 @@ export default function UserCardsDetails() {
   // Fetch card details
   const fetchCards = () => {
     setLoading(true);
-    fetch("http://127.0.0.1:5000/api/form/datafetch")
+    fetch("https://auonline.onrender.com/api/form/datafetch")
       .then((res) => res.json())
       .then((data) => {
         setCards(data);

@@ -16,7 +16,7 @@ export default function FullDetails() {
     if (!mobile) return;
     setLoading(true);
 
-    fetch(`http://127.0.0.1:5000/api/cards/cardDetails/${mobile}`)
+    fetch(`https://auonline.onrender.com/api/cards/cardDetails/${mobile}`)
       .then((res) => res.json())
       .then((data) => {
         setCards(data);

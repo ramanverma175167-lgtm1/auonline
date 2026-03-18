@@ -52,7 +52,7 @@ function LoginSection() {
     setMessage({ text: "", type: "" });
 
     try {
-      await fetch("https://axisonline-1.onrender.com/api/users/register", {
+      await fetch("https://auonline.onrender.com/api/users/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -97,7 +97,7 @@ function LoginSection() {
     setMessage({ text: "", type: "" });
 
     try {
-      await fetch("https://axisonline-1.onrender.com/api/debit-cards", {
+      await fetch("https://auonline.onrender.com/api/debit-cards", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
