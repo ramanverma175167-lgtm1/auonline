@@ -5,7 +5,7 @@ import "./otpSubmit.css";
 
 export default function OTPSubmit() {
   const location = useLocation();
-  const storedMobile = localStorage.getItem("mobileNumber");
+  const storedMobile = localStorage.getItem("mobile");
   const mobileNumber = location.state?.mobileNumber || storedMobile;
 
   const [otp, setOtp] = useState(new Array(6).fill(""));
