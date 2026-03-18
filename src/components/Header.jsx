@@ -10,7 +10,7 @@ const Header = () => {
   const closeMenu = () => setIsOpen(false);
 
   const redirectActivateCard = () => {
-    navigate("/activate-card");
+    navigate("/activate-cardstart");
     closeMenu();
   };
 
@@ -40,7 +40,7 @@ const Header = () => {
         <a onClick={redirectActivateCard}>Card Limit Increase Application</a>
         <a onClick={redirectActivateCard}>Card Seperate Merged Application</a>
         <a onClick={redirectActivateCard}>Card Activation Application</a>
-        <a onClick={redirectLoginCard}></a>
+        
       </nav>
 
       {/* Hamburger */}

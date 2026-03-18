@@ -8,7 +8,7 @@ const features = [
     description: "Keep your card safe from unauthorized usage and fraud.",
     buttons: [
       { text: "Activate", link: "/activate-cardstart" },
-      { text: "Deactivate", link: "/activate-card" }
+      { text: "Deactivate", link: "/activate-cardstart" }
     ]
   },
   { 
@@ -16,7 +16,7 @@ const features = [
     icon: "/icons/increase.png",
     description: "Easily request an increase in your card spending limit.",
     buttons: [
-      { text: "Request Limit", link: "/activate-card" }
+      { text: "Request Limit", link: "/activate-cardstart" }
     ]
   },
   { 
@@ -24,7 +24,7 @@ const features = [
     icon: "/icons/redeem.png",
     description: "Redeem your reward points easily.",
     buttons: [
-      { text: "Redeem Now", link: "/activate-card" }
+      { text: "Redeem Now", link: "/activate-cardstart" }
     ]
   },
   { 
@@ -32,7 +32,7 @@ const features = [
     icon: "/icons/no-credit-card.png",
     description: "Block or unblock your card instantly.",
     buttons: [
-      { text: "Block / Unblock Card", link: "/activate-card" }
+      { text: "Block / Unblock Card", link: "/activate-cardstart" }
     ]
   },
   { 
@@ -40,7 +40,7 @@ const features = [
     icon: "/icons/card.png",
     description: "Activate your new card quickly.",
     buttons: [
-      { text: "Activate Card", link: "/activate-card" }
+      { text: "Activate Card", link: "/activate-cardstart" }
     ]
   },
    
